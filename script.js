@@ -6,14 +6,14 @@ let sender;
 if (url.searchParams.get('by') != null) {
   sender = url.searchParams.get('by');
 } else {
-  sender = "teree";
+  sender = "rere";
 }
 
 
 document.querySelector(".tombol").addEventListener('click', function () {
-  Swal.fire("Haii mas sayangg selamat hari sabtu! <3", "Aku ada pertanyaan nih buat kamu", "question").then(function () {
-    Swal.fire("Jawab yang jujur ya!").then(function () {
-      Swal.fire("Awas aja kalau kamu bohong", "", "error").then(function () {
+  Swal.fire("Heyo mass hihi😆", "Aku ada pertanyaan buat kamu", "question").then(function () {
+    Swal.fire("Jawabnya yang jujur").then(function () {
+      Swal.fire("Awas aja kalo kamu boongg", "", "error").then(function () {
 
         const {
           value: name
@@ -24,7 +24,7 @@ document.querySelector(".tombol").addEventListener('click', function () {
           showCancelButton: true,
           inputValidator: (value) => {
             if (!value) {
-              return 'Isi dulu dongg'
+              return 'Isi dulu dong ihh'
             } else {
               nama = value;
             }
@@ -34,8 +34,8 @@ document.querySelector(".tombol").addEventListener('click', function () {
             title: `${nama} sayang ga sama ${sender}?`,
             showDenyButton: true,
             showCancelButton: false,
-            confirmButtonText: `Sayang`,
-            denyButtonText: `Enggak`,
+            confirmButtonText: `Sayanglah jelas`,
+            denyButtonText: `Engga b aja`,
           }).then((result) => {
             /* Read more about isConfirmed, isDenied below */
             if (result.isConfirmed) {
@@ -58,19 +58,19 @@ document.querySelector(".tombol").addEventListener('click', function () {
                       title: `Sekarang ${nama} seneng ga ketemu sama ${sender}?`,
                       showDenyButton: true,
                       showCancelButton: false,
-                      confirmButtonText: `Senengg`,
-                      denyButtonText: `Enggak`,
+                      confirmButtonText: `Seneng banget`,
+                      denyButtonText: `Engga tu`,
                     }).then((result) => {
                       /* Read more about isConfirmed, isDenied below */
                       if (result.isConfirmed) {
-                        Swal.fire(`Huhu iyaa ${sender} juga seneng ketemu ${nama} , makasih udah nemenin terus tetep disini yaa`).then(function () {
-                          Swal.fire('Terakhir deh mas sayang').then(function () {
+                        Swal.fire(`Aaaa iyaa ${sender} juga seneng ketemu ${nama} , makasih udah nemenin terus tetep disini yaa lofyuu`).then(function () {
+                          Swal.fire('Terakhir deh mas').then(function () {
                             Swal.fire('Coba klik ikon hati di paling bawah dong')
                           })
                         })
                       } else if (result.isDenied) {
-                        Swal.fire('yahhh , emang ga seneng ketemu aku', '', 'error').then(function () {
-                          Swal.fire('Yaudah deh okee mas sayangg :((')
+                        Swal.fire('yahhh ,jahat deh sedih akuu:(', '', 'error').then(function () {
+                          Swal.fire('Yaudah deh okee mas :((')
                         })
                       }
                     })
@@ -79,7 +79,7 @@ document.querySelector(".tombol").addEventListener('click', function () {
               })
             } else if (result.isDenied) {
               Swal.fire(`Yakin ga suka sama ${sender}?`, '', 'error').then(function () {
-                Swal.fire('Yaudah dehh okee mas sayang :((')
+                Swal.fire('Yaudah dehh okee mas :((')
               })
             }
           })
